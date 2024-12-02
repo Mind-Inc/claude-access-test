@@ -1,0 +1,16 @@
+name: PR Automation
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
+  automation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: PR Validation
+        run: |
+          echo "Validating PR..."
+          echo "Branch: ${{ github.head_ref }}"
+          echo "Files changed: $(git diff --name-only ${{ github.base_ref }} ${{ github.head_ref }})"
