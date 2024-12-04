@@ -1,12 +1,12 @@
 /**
- * Verified PR Investigation Patterns
- * Last verified: December 2024
- * 
- * This module contains tested and verified patterns for investigating
- * pull requests using the GitHub MCP integration.
+ * PR Investigation Patterns
+ * Verified implementations for investigating pull requests
  */
 
-// PR Content Investigation Pattern
+/**
+ * Investigate PR content
+ * Retrieves and processes files from a pull request
+ */
 async function investigatePullRequest(owner, repo, branch, files) {
     const results = [];
     
@@ -21,7 +21,7 @@ async function investigatePullRequest(owner, repo, branch, files) {
             
             results.push({
                 path: filePath,
-                content: fileContent.content, // Base64 encoded
+                content: fileContent.content,
                 sha: fileContent.sha
             });
         } catch (error) {
@@ -32,16 +32,18 @@ async function investigatePullRequest(owner, repo, branch, files) {
     return results;
 }
 
-// Feature Branch Creation Pattern
+/**
+ * Create feature branch for PR
+ */
 async function createFeatureBranch(owner, repo, branchName, files) {
-    // Create new branch
+    // Create branch
     await create_branch({
         owner,
         repo,
         branch: branchName
     });
     
-    // Push multiple files in single commit
+    // Push files
     await push_files({
         owner,
         repo,
@@ -54,7 +56,9 @@ async function createFeatureBranch(owner, repo, branchName, files) {
     });
 }
 
-// PR Creation Pattern
+/**
+ * Create PR with proper error handling
+ */
 async function createPullRequest(owner, repo, branch) {
     try {
         await create_pull_request({
