@@ -1,35 +1,85 @@
-# MCP Integration Tests
+# MCP Tests
 
-This directory contains test patterns, results, and verification procedures for MCP integration.
+Test patterns, implementations, and verification procedures for MCP GitHub integration.
 
-## Structure
+## Directory Structure
 
 ```
 /api/                  # API operation tests
+  /verification/       # Operation verification
+  /analysis/          # Result analysis
 /pr-investigation/     # PR testing patterns
-/verification/         # Operation verification
+/results/             # Test results and logs
+/archive/             # Historical test data
 ```
 
 ## Test Categories
 
-1. **API Tests**
-   - Basic operations
-   - Error handling
-   - Edge cases
+### API Tests
+- Basic operation verification
+- Error handling patterns
+- Edge case testing
+- Response validation
 
-2. **PR Investigation**
-   - Content access
-   - Branch management
-   - State verification
+### PR Investigation
+- Content access patterns
+- Branch management
+- Review workflows
+- State verification
 
-3. **Verification**
-   - Public repository patterns
-   - Private repository patterns
-   - Access control tests
+### Access Validation
+- Public repository access
+- Private repository patterns
+- Permission verification
 
-## Guidelines
+## Test Guidelines
 
-1. Document all test cases
-2. Include expected results
-3. Verify error handling
-4. Clean up test data
+1. Structure
+   - Use descriptive test names
+   - Document expected results
+   - Include error scenarios
+
+2. Verification
+   - Test in isolation
+   - Verify all outcomes
+   - Document edge cases
+
+3. Documentation
+   - Include setup steps
+   - Document prerequisites
+   - Note any limitations
+
+4. Cleanup
+   - Remove test artifacts
+   - Clean up test branches
+   - Archive test results
+
+## Running Tests
+
+1. Environment Setup
+   ```bash
+   # Configure test environment
+   export GITHUB_TOKEN=your_token
+   ```
+
+2. Test Execution
+   ```bash
+   # Run API tests
+   npm run test:api
+   
+   # Run PR tests
+   npm run test:pr
+   ```
+
+3. Result Verification
+   - Check test logs
+   - Verify GitHub state
+   - Document any issues
+
+## Current Status
+
+- API Tests: ✓ Verified
+- PR Tests: ✓ Verified
+- Access Tests: ✓ Verified
+
+Last Updated: December 4, 2024
