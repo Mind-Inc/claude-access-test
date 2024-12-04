@@ -1,0 +1,6 @@
+{
+  "testType": "public-verification",
+  "scope": "public-repos",
+  "operations": ["read", "list", "search"],
+  "status": "verified"
+}
