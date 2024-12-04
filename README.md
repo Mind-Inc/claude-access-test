@@ -22,9 +22,7 @@ While Claude could utilize fetch and puppeteer for research, we're intentionally
 ```
 /knowledge-base/           # Verified patterns and implementations
   /github/                # GitHub integration patterns
-    /implementations/     # Verified implementation code
-    /workflows/          # Common workflow patterns
-    /examples/           # Usage examples
+  /common/               # Shared MCP patterns
 
 /working-pipeline/        # Active research and experiments
   /objectives/           # Current research goals
@@ -34,33 +32,35 @@ While Claude could utilize fetch and puppeteer for research, we're intentionally
 
 /docs/
   /guides/
-    /github/            # GitHub MCP function guides
-  /best-practices/       # Verified approaches
-  /troubleshooting/      # Common issues and solutions
+    /github/            # GitHub function guides
+  /best-practices/      # Verified approaches
+  /troubleshooting/     # Common issues and solutions
 
 /examples/               # Implementation examples
   /github/              # GitHub integration examples
-
-/tests/                  # Test patterns and results
 ```
 
 ## Current Status
 
 ### Active Development
-- GitHub MCP integration patterns and documentation
-- Core implementation examples
-- Best practices and usage patterns
+- GitHub MCP integration patterns
+- Knowledge base structure
+- Basic implementation examples
 
-### Available GitHub Functions
-1. `create_branch` - Create new branches
-2. `create_issue` - Create repository issues
-3. `create_or_update_file` - Manage single file content
-4. `create_pull_request` - Create pull requests
-5. `create_repository` - Create new repositories
-6. `fork_repository` - Fork existing repositories
-7. `get_file_contents` - Access file/directory content
-8. `push_files` - Batch file operations
-9. `search_repositories` - Repository search functionality
+### Known Issues
+- PR creation shows errors despite successful creation (tracked for investigation)
+
+## Project Phases
+
+### Phase 1: GitHub Integration (Current)
+- Document GitHub MCP patterns
+- Build core knowledge base
+- Establish working patterns
+
+### Phase 2: Additional Features
+- TBD based on project needs
+- Focus on required functionality
+- Verified implementation patterns
 
 ## Contributing
 
@@ -70,20 +70,9 @@ This is an active research project where both Claude and human researchers are l
 3. Examples should be practical and tested
 4. Follow existing structure and patterns
 
-## Phase 1: GitHub Integration
+## Future Development
 
-Current focus is on documenting and verifying GitHub MCP integration patterns:
-1. Core function documentation
-2. Implementation examples
-3. Best practices
-4. Common workflows
-5. Error handling patterns
-
-### Documentation Priorities
-1. Function-specific guides
-2. Implementation patterns
-3. Usage examples
-4. Troubleshooting guides
+The repository will expand based on project needs and verified patterns.
 
 ## Version Information
 - Last Updated: December 4, 2024
