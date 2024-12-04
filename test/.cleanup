@@ -1,0 +1,8 @@
+# Cleanup In Progress
+
+This directory is being cleaned up as part of issue #46.
+Files have been migrated to the new tests/ directory structure.
+
+Please use the new locations:
+- API tests: tests/api/*
+- Archived tests: tests/archive/*
